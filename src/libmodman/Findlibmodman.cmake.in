@@ -1,0 +1,25 @@
+# - Try to find libmodman
+# Once done this will define
+#
+#  LIBMODMAN_FOUND - system has libmodman
+#  LIBMODMAN_INCLUDE_DIR - the libmodman include directory
+#  LIBMODMAN_LIBRARIES - libmodman library
+#
+# Copyright (c) 2010, Dominique Leuenberger
+#
+# Redistribution and use is allowed according the license terms
+# of libmodman, which this file is integrated part of.
+
+# Find module_manager.hpp and the corresponding library (libmodman.so)
+FIND_PATH(LIBMODMAN_INCLUDE_DIR libmodman/module_manager.hpp)
+FIND_LIBRARY(LIBMODMAN_LIBRARIES NAMES modman)
+
+# Set library version
+SET(LIBMODMAN_VERSION @PROJECT_VERSION@)
+SET(LIBMODMAN_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+SET(LIBMODMAN_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+SET(LIBMODMAN_VERSION_PATCH @PROJECT_VERSION_PATCH@)
+
+# Give output, should this be wished (this handles also QUIET and REQUIRED)
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(libmodman DEFAULT_MSG LIBMODMAN_LIBRARIES LIBMODMAN_INCLUDE_DIR)

@@ -1,0 +1,9 @@
+prefix=@PKGCONFIG_PREFIX@
+libdir=@PKGCONFIG_LIBDIR@
+includedir=@PKGCONFIG_INCLUDEDIR@
+
+Name: libmodman-2.0
+Description: Module Manager Library (plugins, addins, etc)
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lmodman
+Cflags: -I${includedir}

@@ -1,0 +1,6 @@
+cmake ./
+make
+make test
+sudo make install
+
+To adjust install paths, see cmake/paths.cmk.

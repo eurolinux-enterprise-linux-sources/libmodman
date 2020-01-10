@@ -1,6 +1,6 @@
 Name:           libmodman
 Version:        2.0.1
-Release:        6%{?dist}
+Release:        8%{?dist}
 Summary:        A simple library for managing C++ modules (plug-ins)
 
 Group:          System Environment/Libraries
@@ -61,6 +61,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/cmake/Modules/Findlibmodman.cmake
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 2.0.1-8
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.0.1-7
+- Mass rebuild 2013-12-27
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.0.1-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
